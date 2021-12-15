@@ -1,0 +1,17 @@
+@import "variables";
+@mixin grid($val){
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax($val,1fr));
+    gap:1.5rem;
+}
+
+@mixin Button($Bghover, $pady, $padx){
+    padding: $pady $padx;
+    border:$border;
+    cursor:pointer;
+    font-size:1.2rem;
+    &:hover{
+        background:$Bghover;
+        color:white;
+    }
+}

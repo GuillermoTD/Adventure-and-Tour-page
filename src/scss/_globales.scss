@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+ 
+//Globales
+html{
+    font-size:62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing:inherit;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Noto-Sans', 'sans-serif';
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    display:inline-block;
+}
+
+img{
+    width:80%;
+    height:auto;
+}
+.servicios, .presentacion, .footer-content{
+    width:80px;
+    margin:auto;
+}
