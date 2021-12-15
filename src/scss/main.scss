@@ -69,31 +69,31 @@ section {
     box-shadow: 2px 3px 4px #0001;
   }
 
-  & a {
+  a {
     color: $black;
   }
 
-  & a:hover {
+  a:hover {
     color: $green;
   }
 
-  & .Header_logo {
+  .Header_logo {
     margin-right: auto;
     font-size: 2.4rem;
     font-weight: bolder;
 
-    & i {
+    i {
       font-size: 3.4rem;
       color: $green;
     }
   }
 
-  & .Header_navbar {
+  .Header_navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.6rem;
-    width: 45rem;
+    width: 35rem;
 
     #close-btn {
       cursor: pointer;
@@ -101,7 +101,7 @@ section {
     }
   }
 
-  & .Header_icons {
+  .Header_icons {
     display: flex;
     justify-content: space-around;
     font-size: 2rem;
@@ -110,11 +110,11 @@ section {
     color: $black;
     width: 8rem;
 
-    & .fas:hover {
+    .fas:hover {
       color: $green;
     }
 
-    & .menu-btn {
+    .menu-btn {
       display: none;
     }
   }
@@ -124,6 +124,7 @@ section {
 .Home {
   padding: 0;
   .Home_slider {
+    display:flex;
     .Home_wrapper {
       .Home_slide {
         .Home_box {
@@ -136,11 +137,18 @@ section {
           width: 100vw;
           &.second {
             justify-content: flex-start;
+
+            .Home_Content{
+            margin-left:14rem;
+
+            }
           }
 
           .Home_Content {
             width: 50rem;
             height: 30rem;
+            margin-right:4rem;
+
 
             h2 {
               font-size: 2rem;
@@ -149,7 +157,7 @@ section {
             }
             span {
               color: $green;
-              font-size: 8rem;
+              font-size: 6rem;
               margin-bottom: 2rem;
               font-weight: bold;
             }
@@ -157,20 +165,18 @@ section {
               font-size: 1.7rem;
               width: 100%;
               text-align: justify;
-              margin-bottom: 2rem;
               font-weight: 500;
+              line-height:2rem;
+              margin-bottom:3rem;
             }
-            button,
             .Home_startBtn {
-              border: 2px solid $black;
-              padding: 1.3rem 3rem;
-              background: none;
+              @include Button($green,1rem,4rem);
               cursor: pointer;
               transition: 0.3s ease-in-out;
               font-size: 1.39rem;
               color: $black;
             }
-            button:hover,
+          
             .Home_startBtn:hover {
               color: $white;
               background: $black;
@@ -205,7 +211,7 @@ section {
   }
 
   .swiper-slide {
-    & .Home_box {
+    .Home_box {
       display: block;
       width: 100%;
       height: 100%;
@@ -216,44 +222,44 @@ section {
 
 /* Category styles*/
 .Category {
-  & .Category_heading {
+  .Category_heading {
     text-align: center;
     font-size: 2.8rem;
     position: relative;
     top: -5rem;
   }
-  & .Category_boxContainer {
+  .Category_boxContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     @include grid(25rem);
 
-    & .box {
+    .box {
       text-align: center;
       padding: 2rem;
-      & img {
+      img {
         object-fit: cover;
         width: 20rem;
         height: 20rem;
         border-radius: 50%;
       }
-      & h3 {
+      h3 {
         font-size: 2rem;
         color: $green;
         line-height: 4rem;
       }
 
-      & p {
+       p {
         font-size: 1.2rem;
         line-height: 3rem;
       }
-      & button {
+      button {
         padding: 1rem 2rem;
         cursor: pointer;
         border: $border;
         background: none;
       }
-      & button:hover {
+      button:hover {
         background: $green;
       }
     }
@@ -268,18 +274,18 @@ section {
   justify-content: space-around;
   flex: 1 1 42rem;
 
-  & .About_img {
+  .About_img {
     overflow: hidden;
     box-shadow: 30px 30px 2px 3px #0001;
     border-radius: 1rem;
 
-    & img {
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       flex: 1 1 42rem;
     }
-    & img:hover {
+    img:hover {
       cursor: pointer;
       display: block;
       transform: scale(1.1);
@@ -287,17 +293,17 @@ section {
     }
   }
 
-  & .About_content {
+  .About_content {
     margin-left: 4rem;
     h2 {
       font-size: 2.7rem;
     }
 
-    & p {
+    p {
       font-size: 1.4rem;
       margin-bottom: 1.2rem;
     }
-    & button {
+    button {
       @include Button($green, 1rem, 2rem);
     }
   }
@@ -595,7 +601,7 @@ section {
   justify-content: center;
 
   .Newsletter_heading {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
   }
   .Newsletter_text {

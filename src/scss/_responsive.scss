@@ -1,5 +1,6 @@
 @import "variables";
 @import "animations";
+@import "mixins";
 /*Media queries*/
 @media (max-width: 1326px) {
   .Header {
@@ -14,21 +15,23 @@
     font-size: 50%;
   }
   .Home {
-    & .Home_box {
+
+  .Home_box {
+      display:flex;
       justify-content: center;
       background-position: right !important;
 
-      & .second {
+    .second {
         justify-content: center;
-        text-align:center;
+        text-align: center;
       }
     }
-    
+
     .Home_Content {
-      text-align:center;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       span {
         font-size: 3rem;
@@ -87,16 +90,25 @@
       }
     }
 
-    & .Header_icons {
-      & #menu-btn {
+    .Header_icons {
+     #menu-btn {
         display: inline-block;
       }
     }
   }
   .Home {
-    .Home_box{
+    .Home_box {
+      justify-content: center;
+        background-position:right !important;
       &.second {
         justify-content: center;
+        background-position:left !important;
+      }
+      .Home_content{
+        text-align:center;
+        span{
+          font-size:3rem;
+        }
       }
     }
   }
@@ -109,12 +121,12 @@
       top: 10rem;
     }
   }
+ 
 }
 
 @media (max-width: 450px) {
   .Home {
-    
-    .Home_box{
+    .Home_box {
       .Home_Content {
         width: 30rem;
         height: 20rem;
@@ -137,38 +149,102 @@
           margin-bottom: 2rem;
           font-weight: 500;
         }
+      }
     }
-  }
-  .visible {
-    visibility: visible;
-  }
-  .About {
-    .About_content {
-      flex: 1 1 42rem;
+    .visible {
+      visibility: visible;
     }
-    .About_img {
-      box-shadow: 20px 20px 2px 3px #0001;
+    .About {
+      .About_content {
+        flex: 1 1 42rem;
+      }
+      .About_img {
+        box-shadow: 20px 20px 2px 3px #0001;
+      }
     }
   }
 }
 
 @media (max-width: 350px) {
-  .Home {
-    & .second {
-      left: -3%;
-    }
-  }
-  .visible {
-    visibility: visible;
-  }
+.Header{
+  .Header_navbar {
+    width: 10rem;
 
-  .About {
-    .About_content {
-      flex: 1 1 42rem;
-    }
-    .About_img {
-      box-shadow: 20px 20px 2px 3px #0001;
+    #close-btn {
+      cursor: pointer;
+      visibility: hidden;
+      
     }
   }
 }
+  .Home {
+    .Home_slide {
+      overflow:hidden;
+      .Home_box {
+        .Home_Content {
+          font-size:5px;
+          width: 20rem;
+          height: 10rem;
+          border:$border;
+
+          h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+          }
+          span {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+          }
+          p {
+            width: 100%;
+            text-align: justify;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+  .Services{
+    .Services_container{
+      @include grid(15rem);
+      align-items:center;
+      .Services_box{
+        width:80%;
+        height:27rem;
+
+        .img {
+          object-fit: cover;
+          width: 100%;
+          height: 60%;
+          border:$border;
+        }
+        .Services_content {
+          height: 12rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h3 {
+            font-size: 2rem;
+            margin-top: 1rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+          .btn {
+            @include Button($green, .5rem, 2rem);
+          }
+        }
+
+      }
+  
+    }
+  }
+  .Newsletter{
+    .Newsletter_heading {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
 }
