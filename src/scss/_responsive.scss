@@ -15,13 +15,12 @@
     font-size: 50%;
   }
   .Home {
-
-  .Home_box {
-      display:flex;
+    .Home_box {
+      display: flex;
       justify-content: center;
       background-position: right !important;
 
-    .second {
+      .second {
         justify-content: center;
         text-align: center;
       }
@@ -91,7 +90,7 @@
     }
 
     .Header_icons {
-     #menu-btn {
+      #menu-btn {
         display: inline-block;
       }
     }
@@ -99,15 +98,15 @@
   .Home {
     .Home_box {
       justify-content: center;
-        background-position:right !important;
+      background-position: right !important;
       &.second {
         justify-content: center;
-        background-position:left !important;
+        background-position: left !important;
       }
-      .Home_content{
-        text-align:center;
-        span{
-          font-size:3rem;
+      .Home_content {
+        text-align: center;
+        span {
+          font-size: 3rem;
         }
       }
     }
@@ -121,7 +120,6 @@
       top: 10rem;
     }
   }
- 
 }
 
 @media (max-width: 450px) {
@@ -166,26 +164,32 @@
 }
 
 @media (max-width: 350px) {
-.Header{
-  .Header_navbar {
-    width: 10rem;
+  .Header {
+    .Header_navbar {
+      width: 10rem;
 
-    #close-btn {
-      cursor: pointer;
-      visibility: hidden;
-      
+      #close-btn {
+        cursor: pointer;
+        visibility: hidden;
+      }
     }
   }
-}
   .Home {
     .Home_slide {
-      overflow:hidden;
       .Home_box {
+
+        &.second {
+          justify-content: flex-start;
+
+          .Home_Content {
+            justify-content: flex-start;
+          }
+        }
         .Home_Content {
-          font-size:5px;
+          font-size: 5px;
           width: 20rem;
           height: 10rem;
-          border:$border;
+          backgroun
 
           h2 {
             font-size: 1.2rem;
@@ -205,19 +209,19 @@
       }
     }
   }
-  .Services{
-    .Services_container{
+  .Services {
+    .Services_container {
       @include grid(15rem);
-      align-items:center;
-      .Services_box{
-        width:80%;
-        height:27rem;
+      align-items: center;
+      .Services_box {
+        width: 80%;
+        height: 27rem;
 
         .img {
           object-fit: cover;
           width: 100%;
           height: 60%;
-          border:$border;
+          border: $border;
         }
         .Services_content {
           height: 12rem;
@@ -232,19 +236,16 @@
             font-size: 1.5rem;
           }
           .btn {
-            @include Button($green, .5rem, 2rem);
+            @include Button($green, 0.5rem, 2rem);
           }
         }
-
       }
-  
     }
   }
-  .Newsletter{
+  .Newsletter {
     .Newsletter_heading {
       font-size: 2rem;
       font-weight: bold;
     }
   }
-
 }

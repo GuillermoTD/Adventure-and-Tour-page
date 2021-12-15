@@ -124,7 +124,7 @@ section {
 .Home {
   padding: 0;
   .Home_slider {
-    display:flex;
+    display: flex;
     .Home_wrapper {
       .Home_slide {
         .Home_box {
@@ -138,17 +138,13 @@ section {
           &.second {
             justify-content: flex-start;
 
-            .Home_Content{
-            margin-left:14rem;
-
+            .Home_Content {
             }
           }
 
           .Home_Content {
             width: 50rem;
             height: 30rem;
-            margin-right:4rem;
-
 
             h2 {
               font-size: 2rem;
@@ -166,17 +162,17 @@ section {
               width: 100%;
               text-align: justify;
               font-weight: 500;
-              line-height:2rem;
-              margin-bottom:3rem;
+              line-height: 2rem;
+              margin-bottom: 3rem;
             }
             .Home_startBtn {
-              @include Button($green,1rem,4rem);
+              @include Button($green, 1rem, 4rem);
               cursor: pointer;
               transition: 0.3s ease-in-out;
               font-size: 1.39rem;
               color: $black;
             }
-          
+
             .Home_startBtn:hover {
               color: $white;
               background: $black;
@@ -249,7 +245,7 @@ section {
         line-height: 4rem;
       }
 
-       p {
+      p {
         font-size: 1.2rem;
         line-height: 3rem;
       }
@@ -342,8 +338,6 @@ section {
       height: 90%;
       width: 100%;
       object-fit: cover;
-
-
     }
   }
 
@@ -663,7 +657,7 @@ section {
         font-size: 1.3rem;
         margin-top: 1.5rem;
         text-transform: none;
-        display:flex;
+        display: flex;
       }
       i {
         margin-right: 1rem;
@@ -672,15 +666,14 @@ section {
       }
     }
   }
-  .Footer_credit{
-  font-size:1.8rem;
-  text-align:center;
-  width:100%;
-  margin-top:2rem;
-  margin-top:9rem;
-  span:nth-child(1){
-    color:$green;
+  .Footer_credit {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-top: 9rem;
+    span:nth-child(1) {
+      color: $green;
+    }
   }
-  }
-
 }
