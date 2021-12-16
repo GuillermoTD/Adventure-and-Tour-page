@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "font-awesome": "^4.7.0",
-    "material-icons": "^1.10.3",
     "sass": "^1.44.0",
     "swiper": "^7.3.1"
   },
