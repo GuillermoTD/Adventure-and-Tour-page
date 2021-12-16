@@ -17,17 +17,12 @@
   .Home {
     .Home_box {
       display: flex;
-      justify-content: center;
       background-position: right !important;
 
-      .second {
-        justify-content: center;
-        text-align: center;
-      }
+    
     }
 
     .Home_Content {
-      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;

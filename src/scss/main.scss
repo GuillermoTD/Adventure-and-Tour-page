@@ -81,6 +81,7 @@ section {
     margin-right: auto;
     font-size: 2.4rem;
     font-weight: bolder;
+    display:flex;
 
     i {
       font-size: 3.4rem;
@@ -91,21 +92,24 @@ section {
   .Header_navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-size: 1.6rem;
     width: 35rem;
+    position:relative;
+    right:10rem;
 
     #close-btn {
       cursor: pointer;
       visibility: hidden;
+    }
+    a{
+      padding:0 1rem;
     }
   }
 
   .Header_icons {
     display: flex;
     justify-content: space-around;
-    font-size: 2rem;
-    margin-left: 2rem;
+    font-size: 1.68rem;
     cursor: pointer;
     color: $black;
     width: 8rem;
@@ -137,9 +141,11 @@ section {
           width: 100vw;
           &.second {
             justify-content: flex-start;
+            .Home_Content{
+            margin-left:2rem;
 
-            .Home_Content {
             }
+            
           }
 
           .Home_Content {
@@ -148,7 +154,7 @@ section {
 
             h2 {
               font-size: 2rem;
-              margin-bottom: 0.5rem;
+              margin-top: 2rem;
               text-transform: uppercase;
             }
             span {

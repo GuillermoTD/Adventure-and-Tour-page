@@ -38,19 +38,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     background-position: right !important;
   }
-  .Home .Home_box .second {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-  }
   .Home .Home_Content {
-    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -374,6 +364,9 @@ section {
   margin-right: auto;
   font-size: 2.4rem;
   font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .Header .Header_logo i {
@@ -388,16 +381,19 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-size: 1.6rem;
   width: 35rem;
+  position: relative;
+  right: 10rem;
 }
 
 .Header .Header_navbar #close-btn {
   cursor: pointer;
   visibility: hidden;
+}
+
+.Header .Header_navbar a {
+  padding: 0 1rem;
 }
 
 .Header .Header_icons {
@@ -406,8 +402,7 @@ section {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-size: 2rem;
-  margin-left: 2rem;
+  font-size: 1.68rem;
   cursor: pointer;
   color: #10221b;
   width: 8rem;
@@ -454,6 +449,10 @@ section {
           justify-content: flex-start;
 }
 
+.Home .Home_slider .Home_wrapper .Home_slide .Home_box.second .Home_Content {
+  margin-left: 2rem;
+}
+
 .Home .Home_slider .Home_wrapper .Home_slide .Home_box .Home_Content {
   width: 50rem;
   height: 30rem;
@@ -461,7 +460,7 @@ section {
 
 .Home .Home_slider .Home_wrapper .Home_slide .Home_box .Home_Content h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
   text-transform: uppercase;
 }
 
